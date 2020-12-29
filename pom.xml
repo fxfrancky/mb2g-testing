@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>14</java.version>
+        <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <junit.version>5.5.2</junit.version>
@@ -24,6 +24,13 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.jboss.ejb3</groupId>
+            <artifactId>jboss-ejb3-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -36,5 +43,16 @@
 
         </plugins>
     </build>
+<!--    <repositories>-->
+<!--        &lt;!&ndash; Add a repository to resolve jboss-ejb3-api &ndash;&gt;-->
+<!--        <repository>-->
+<!--            <id>redhat-ga</id>-->
+<!--            <url>https://maven.repository.redhat.com/ga</url>-->
+<!--            &lt;!&ndash; Never take Snapshots, only releases&ndash;&gt;-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
 </project>
